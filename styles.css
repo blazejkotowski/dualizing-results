@@ -1,0 +1,46 @@
+html, body {
+  font-family: Arial;
+  font-size: 9pt;
+  /* margin: 0; */
+  /* padding: 0; */
+  background: #221f3b;
+  color: #ffffff;
+}
+
+a {
+  color: #ebebeb;
+}
+
+section.original {
+  /* text-align: center; */
+}
+
+.original img {
+  width: 1000px !important;
+}
+
+section h2 {
+  /* text-align: center; */
+  background: #6f4a8e;
+}
+
+h3 {
+  margin: 0;
+}
+
+.dualizations, .baselines {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.dualization, .baseline {
+  width: 700px;
+  margin-right: 20px;
+}
+
+.midi img {
+  width: 700px;
+}
