@@ -7,12 +7,12 @@ html, body {
   color: #ffffff;
 }
 
-a {
-  color: #ebebeb;
+nav {
+  font-size: 1.4em;
 }
 
-section.original {
-  /* text-align: center; */
+a {
+  color: #ebebeb;
 }
 
 .original img {
@@ -43,4 +43,10 @@ h3 {
 
 .midi img {
   width: 700px;
+}
+
+.audio {
+  width: 700px;
+  margin: 10px 0 40px 0;
+  text-align: left;
 }
