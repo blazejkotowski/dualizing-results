@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1>Example 1</h1>
+    <section class="original">
+      <h3>Original pattern</h3>
+      <div class="midi">
+        <img src="resources/1-original.png">
+      </div>
+      <div class="audio">
+        <audio src="resources/1-original.wav">
+      </div>
+    </section>
+
+    <section id="dualizations" class="dualizations">
+      <!-- h-vector autoencoder -->
+      <div class="dualizaition">
+        <h3>h-vector autoencoder</h3>
+        <div class="midi">
+          <img src="resources/1-ae-dualization.png">
+        </div>
+        <div class="audio">
+          <audio src="resources/1-ae-dualization.wav">
+        </div>
+      </div>
+
+      <!-- 2d decoder bottleneck h-vector -->
+      <div class="dualizaition">
+        <h3>2d decoder bottleneck h-vector</h3>
+        <div class="midi">
+          <img src="resources/1-bottleneck-h-dualization.png">
+        </div>
+        <div class="audio">
+          <audio src="resources/1-bottleneck-h-dualization.wav">
+        </div>
+      </div>
+
+      <!-- 2d decoder bottleneck c-vector -->
+      <div class="dualizaition">
+        <h3>2d decoder bottleneck h-vector</h3>
+        <div class="midi">
+          <img src="resources/1-bottleneck-c-dualization.png">
+        </div>
+        <div class="audio">
+          <audio src="resources/1-bottleneck-c-dualization.wav">
+        </div>
+      </div>
+    </div>
+
+    <section id="baselines" class="baselines">
+      <!-- Baseline Kick & Hihat from original pattern -->
+      <div class="baseline">
+        <h3>Kick & Hihat</h3>
+        <div class="midi">
+          <img src="resources/1-kick-hihat-dualization.png">
+        </div>
+        <div class="audio">
+          <audio src="resources/1-kick-hihat-dualization.wav">
+        </div>
+      </div>
+
+      <!-- Baseline Kick & Snare from original pattern -->
+      <div class="baseline">
+        <h3>Kick & Snare</h3>
+        <div class="midi">
+          <img src="resources/1-kick-snare-dualization.png">
+        </div>
+        <div class="audio">
+          <audio src="resources/1-kick-snare-dualization.wav">
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
