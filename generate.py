@@ -34,6 +34,7 @@ for i in range(1, num_listening_tests+1):
 
   with open(filename, 'w') as fh:
     fh.write(listening_test.render(
+      i=i,
       orig_index=orig_index,
       random_index_1=random1_index,
       random_index_2=random2_index,
