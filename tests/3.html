@@ -1,8 +1,11 @@
 <html>
   <head>
     <title>Test 3</title>
+    <style>
+      .label { display: none; }
+      .show { display: inline !important; }
+    </style>
   </head>
-
   <body>
     <nav>
       Tests:
@@ -28,25 +31,26 @@
         <a href="/dualizing-results/tests/10.html">10</a>
       
     </nav>
+    <button id="show-correct">Show labels</button>
     <section id="dualization-to-originals-model1">
       <h2>Match dualization with original recording</h2>
       <h3>Model 1</h3>
       <div class="example main">
         <h4>Dualization</h4>
-        <audio controls src="/dualizing-results/resources/37-ae-dualization.mp3">
+        <audio controls src="/dualizing-results/resources/4-ae-dualization.mp3">
       </div>
 
       <div class="example">
         <h4>Option 1</h4>
-        <audio controls src="/dualizing-results/resources/26-original.mp3">
+        <audio controls src="/dualizing-results/resources/19-original.mp3">
       </div>
       <div class="example">
-        <h4>Option 2</h4>
-        <audio controls src="/dualizing-results/resources/37-original.mp3">
+        <h4>Option 2 <span class="label">(Correct)</span></h4>
+        <audio controls src="/dualizing-results/resources/4-original.mp3">
       </div>
       <div class="example">
         <h4>Option 3</h4>
-        <audio controls src="/dualizing-results/resources/15-original.mp3">
+        <audio controls src="/dualizing-results/resources/34-original.mp3">
       </div>
     </section>
     <section id="dualization-to-originals-model2">
@@ -54,20 +58,20 @@
       <h3>Model 2</h3>
       <div class="example main">
         <h4>Dualization</h4>
-        <audio controls src="/dualizing-results/resources/37-bottleneck-h-dualization.mp3">
+        <audio controls src="/dualizing-results/resources/4-bottleneck-h-dualization.mp3">
       </div>
 
       <div class="example">
-        <h4>Option 1</h4>
-        <audio controls src="/dualizing-results/resources/37-original.mp3">
+        <h4>Option 1 <span class="label">(Correct)</span></h4>
+        <audio controls src="/dualizing-results/resources/4-original.mp3">
       </div>
       <div class="example">
         <h4>Option 2</h4>
-        <audio controls src="/dualizing-results/resources/26-original.mp3">
+        <audio controls src="/dualizing-results/resources/19-original.mp3">
       </div>
       <div class="example">
         <h4>Option 3</h4>
-        <audio controls src="/dualizing-results/resources/15-original.mp3">
+        <audio controls src="/dualizing-results/resources/34-original.mp3">
       </div>
     </section>
 
@@ -75,25 +79,34 @@
       <h2>Select the best dualization</h2>
       <div class="example main">
         <h4>Original pattern</h4>
-        <audio controls src="/dualizing-results/resources/37-original.mp3">
+        <audio controls src="/dualizing-results/resources/4-original.mp3">
       </div>
 
       <div class="example">
-        <h4>Option 1</h4>
-        <audio controls src="/dualizing-results/resources/37-bottleneck-h-dualization.mp3">
+        <h4>Option 1 <span class="label">(Model 2)</span></h4>
+        <audio controls src="/dualizing-results/resources/4-bottleneck-h-dualization.mp3">
       </div>
       <div class="example">
-        <h4>Option 2</h4>
-        <audio controls src="/dualizing-results/resources/37-kick-hihat-dualization.mp3">
+        <h4>Option 2 <span class="label">(Kick & Hihat)</span></h4>
+        <audio controls src="/dualizing-results/resources/4-kick-hihat-dualization.mp3">
       </div>
       <div class="example">
-        <h4>Option 3</h4>
-        <audio controls src="/dualizing-results/resources/37-ae-dualization.mp3">
+        <h4>Option 3 <span class="label">(Model 1)</span></h4>
+        <audio controls src="/dualizing-results/resources/4-ae-dualization.mp3">
       </div>
       <div class="example">
-        <h4>Option 4</h4>
-        <audio controls src="/dualizing-results/resources/37-random-dualization.mp3">
+        <h4>Option 4 <span class="label">(Random)</span></h4>
+        <audio controls src="/dualizing-results/resources/4-random-dualization.mp3">
       </div>
     </section>
+    <script>
+      var showButton = document.getElementById('show-correct');
+      showButton.addEventListener('click', function(e){
+        var labels = document.getElementsByClassName('label');
+        for(var i=0; i<labels.length; i++) {
+          labels[i].classList.add('show');
+        }
+      });
+    </script>
   </body>
 </html>

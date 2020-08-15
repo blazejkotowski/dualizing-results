@@ -1,8 +1,11 @@
 <html>
   <head>
     <title>Test {{ i }}</title>
+    <style>
+      .label { display: none; }
+      .show { display: inline !important; }
+    </style>
   </head>
-
   <body>
     <nav>
       Tests:
@@ -10,6 +13,7 @@
         <a href="/dualizing-results/tests/{{ i }}.html">{{ i }}</a>
       {% endfor %}
     </nav>
+    <button id="show-correct">Show labels</button>
     <section id="dualization-to-originals-model1">
       <h2>Match dualization with original recording</h2>
       <h3>Model 1</h3>
@@ -23,7 +27,7 @@
         <audio controls src="/dualizing-results/resources/{{random_index_1}}-original.mp3">
       </div>
       <div class="example">
-        <h4>Option 2</h4>
+        <h4>Option 2 <span class="label">(Correct)</span></h4>
         <audio controls src="/dualizing-results/resources/{{orig_index}}-original.mp3">
       </div>
       <div class="example">
@@ -40,7 +44,7 @@
       </div>
 
       <div class="example">
-        <h4>Option 1</h4>
+        <h4>Option 1 <span class="label">(Correct)</span></h4>
         <audio controls src="/dualizing-results/resources/{{orig_index}}-original.mp3">
       </div>
       <div class="example">
@@ -61,21 +65,30 @@
       </div>
 
       <div class="example">
-        <h4>Option 1</h4>
+        <h4>Option 1 <span class="label">(Model 2)</span></h4>
         <audio controls src="/dualizing-results/resources/{{orig_index}}-bottleneck-h-dualization.mp3">
       </div>
       <div class="example">
-        <h4>Option 2</h4>
+        <h4>Option 2 <span class="label">(Kick & Hihat)</span></h4>
         <audio controls src="/dualizing-results/resources/{{orig_index}}-kick-hihat-dualization.mp3">
       </div>
       <div class="example">
-        <h4>Option 3</h4>
+        <h4>Option 3 <span class="label">(Model 1)</span></h4>
         <audio controls src="/dualizing-results/resources/{{orig_index}}-ae-dualization.mp3">
       </div>
       <div class="example">
-        <h4>Option 4</h4>
+        <h4>Option 4 <span class="label">(Random)</span></h4>
         <audio controls src="/dualizing-results/resources/{{orig_index}}-random-dualization.mp3">
       </div>
     </section>
+    <script>
+      var showButton = document.getElementById('show-correct');
+      showButton.addEventListener('click', function(e){
+        var labels = document.getElementsByClassName('label');
+        for(var i=0; i<labels.length; i++) {
+          labels[i].classList.add('show');
+        }
+      });
+    </script>
   </body>
 </html>
