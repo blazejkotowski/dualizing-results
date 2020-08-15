@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Example {{ index }}</title>
+  </head>
+
+  <body>
+    <nav>
+      Tests:
+      {% for i in range(1, num_listening_tests+1) %}
+        <a href="/dualizing-results/tests/{{ i }}.html">{{ i }}</a>
+      {% endfor %}
+    </nav>
+    <section id="dualization-to-originals-model1">
+      <h2>Match dualization with original recording</h2>
+      <h3>Model 1</h3>
+      <div class="example main">
+        <h4>Dualization</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-ae-dualization.mp3">
+      </div>
+
+      <div class="example">
+        <h4>Option 1</h4>
+        <audio controls src="/dualizing-results/resources/{{random1_index}}-original.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 2</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-original.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 3</h4>
+        <audio controls src="/dualizing-results/resources/{{random2_index}}-original.mp3">
+      </div>
+    </section>
+    <section id="dualization-to-originals-model2">
+      <h2>Match dualization with original recording</h2>
+      <h3>Model 2</h3>
+      <div class="example main">
+        <h4>Dualization</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-bottleneck-h-dualization.mp3">
+      </div>
+
+      <div class="example">
+        <h4>Option 1</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-original.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 2</h4>
+        <audio controls src="/dualizing-results/resources/{{random2_index}}-original.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 3</h4>
+        <audio controls src="/dualizing-results/resources/{{random1_index}}-original.mp3">
+      </div>
+    </section>
+
+    <section id="original-to-baselines">
+      <h2>Select the best dualization</h2>
+      <div class="example main">
+        <h4>Original pattern</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-original.mp3">
+      </div>
+
+      <div class="example">
+        <h4>Option 1</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-bottleneck-h-dualization.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 2</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-kick-hihat-h-dualization.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 3</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-ae-h-dualization.mp3">
+      </div>
+      <div class="example">
+        <h4>Option 4</h4>
+        <audio controls src="/dualizing-results/resources/{{orig_index}}-random-dualization.mp3">
+      </div>
+    </section>
+  </body>
+</html>
