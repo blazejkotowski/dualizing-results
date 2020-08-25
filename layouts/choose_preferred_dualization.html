@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .part {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        Switch to <a href="../match_dualization_with_original/1.html">Match dualization with original</a>
+      </div>
+      <div>
+        Choose Preferred Dualization:
+        {% for i in range(experiments_num) %}
+          <a href="{{i+1}}.html">{{i+1}}</a>
+        {% endfor %}
+      </div>
+    </nav>
+    <h1>Choose preferred dualization - Example {{qid}}</h1>
+    <div class="part original-pattern">
+      <div class="text">Listen to the original pattern.</div>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{orig_scid}}"></iframe>
+    </div>
+    <div class="part proposed-dualizations">
+      <div class="text">Listen to the proposed dualizations.</div>
+      <iframe width="100%" height="340" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/{{playlist_scid}}"></iframe>
+    </div>
+    <div class="part">
+      <div>AE model: {{mapping[0]}}</div>
+      <div>Bottleneck model: {{mapping[1]}}</div>
+      <div>Random: {{mapping[2]}}</div>
+      <div>Kick with hihat: {{mapping[3]}}</div>
+    </div>
+  </body>
+</html>
